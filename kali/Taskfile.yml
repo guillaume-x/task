@@ -5,6 +5,7 @@ env:
 
 tasks:
   kalitorify-install:
+    desc: Install kalotorify
     cmds:
       - cd ~
       - mkdir workspace
@@ -16,9 +17,11 @@ tasks:
       - sudo make install
 
   kalitorify-start:
+    desc: Start Kalitorify
     cmds:
       - kalitorify --tor
 
   kalitorify-stop:
+    desc: Stop Kalitorify
     cmds:
       - kalitorify --clearnet

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo apt update
+sudo apt install -y golang-go
+sudo go install github.com/go-task/task/v3/cmd/task@latest

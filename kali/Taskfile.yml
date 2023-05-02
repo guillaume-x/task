@@ -1,0 +1,24 @@
+version: '3'
+
+env:
+  OS: kali
+
+tasks:
+  kalitorify-install:
+    cmds:
+      - cd ~
+      - mkdir workspace
+      - cd workspace
+      - sudo apt-get update && sudo apt-get dist-upgrade -y
+      - sudo apt-get install -y tor curl
+      - git clone https://github.com/brainfucksec/kalitorify
+      - cd kalitorify
+      - sudo make install
+
+  kalitorify-start:
+    cmds:
+      - kalitorify --tor
+
+  kalitorify-stop:
+    cmds:
+      - kalitorify --clearnet
